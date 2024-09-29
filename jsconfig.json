@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "paths": {
+            "@/*": ["*"],
+            "@global/*": ["global/*"],
+            "@hooks/*": ["global/hooks/*"]
+        },
+        //
+        "jsx": "react-jsx",
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true
+    },
+    "include": ["src/**/*"]
+}
