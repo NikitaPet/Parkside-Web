@@ -1,0 +1,7 @@
+@media #{$tablet-768} {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto;
+    }
+}

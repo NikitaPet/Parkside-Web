@@ -1,0 +1,75 @@
+@import '@global-styles-assets/all.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: $black-color;
+
+    .cards-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .card {
+            display: grid;
+            grid-template-rows: auto 1fr;
+            gap: 8px;
+            padding: 16px;
+            background: $white-color-2;
+            border-radius: 8px;
+
+            .card-text {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+
+            .img {
+                width: 68px;
+                height: auto;
+                aspect-ratio: 1
+            }
+        }
+    }
+
+    .description {
+        max-width: 860px;
+    }
+}
+
+
+
+@media #{$mobile-375} {
+    .content {
+        .cards-list {
+            .card {
+                gap: 12px;
+                padding: 24px 16px;
+
+                .card-text {
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}
+
+
+
+@import './styles-tablet.module.scss';
+@import './styles-desktop.module.scss';

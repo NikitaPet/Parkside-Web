@@ -1,0 +1,144 @@
+@import '@global-styles-assets/all.scss';
+
+$hiding-duration-ms: 500;
+$hiding-duration: calc($hiding-duration-ms*1ms);
+
+.wrapper {
+    z-index: 500;
+    position: absolute !important;
+    left: 0;
+    bottom: 0;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    pointer-events: none;
+    transition: transform $hiding-duration ease-out;
+}
+
+.window {
+    background: $black-color;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.12);
+
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    pointer-events: auto;
+}
+
+.content {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    .text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+
+        color: $bg-color;
+
+        a {
+            text-decoration: underline;
+        }
+
+        .break {
+            display: none;
+        }
+    }
+
+    .button {
+        width: 100%;
+        min-width: 160px;
+        font-weight: 500;
+        font-size: 15px;
+        color: $black-color;
+        background: $white-color;
+
+        @include mouse-hover {
+            background: $blue-color-2;
+        }
+
+        &:active {
+            background: $blue-color-3;
+        }
+    }
+}
+
+@media #{$mobile-375} {
+    .content {
+        gap: 16px;
+
+        .text {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+    }
+}
+
+@media #{$tablet-768} {
+    .wrapper {
+        top: 16px;
+        bottom: unset;
+    }
+
+    .window {
+        max-width: 640px;
+        border-radius: 8px;
+    }
+
+    .content {
+        height: auto;
+        display: grid;
+        grid-template-rows: unset;
+        grid-template-columns: 1fr auto;
+        gap: 32px;
+
+        .button {
+            width: auto;
+        }
+    }
+}
+
+@media #{$tablet-1024} {
+    .wrapper {
+        top: 42px;
+    }
+
+    .window {
+        max-width: 800px;
+        padding: 24px 32px;
+    }
+
+    .content {
+        gap: 54px;
+
+        .text {
+            .break {
+                display: inline;
+            }
+        }
+    }
+}
+
+@media #{$tablet-1280} {
+    .wrapper {
+        top: 54px;
+    }
+}
+
+@media #{$desktop-1440} {
+    .wrapper {
+        top: 54px;
+    }
+}

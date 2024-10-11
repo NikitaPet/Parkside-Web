@@ -1,0 +1,58 @@
+@media #{$tablet-768} {
+  .principles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .principle {
+      .title-box {
+        .img {
+          height: auto;
+          aspect-ratio: 324/227;
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet-1024} {
+  .principles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .principle {
+      gap: 4px;
+
+      .title-box {
+        gap: 16px;
+
+        .img {
+          height: auto;
+          aspect-ratio: 324/227;
+        }
+      }
+    }
+  }
+}
+
+
+@media #{$tablet-1280} {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .principles {
+    .principle {
+      width: 278px;
+
+      .title-box {
+        .img {
+          height: 200px;
+          min-width: 100%;
+        }
+      }
+    }
+  }
+}

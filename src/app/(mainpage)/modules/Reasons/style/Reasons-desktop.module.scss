@@ -1,0 +1,38 @@
+@media #{$desktop-1440} {
+  .content {
+    padding: 0;
+  }
+
+  .info {
+    padding: 0 $desktop-inner-padding;
+  }
+
+  .container {
+    border-radius: 16px;
+
+    .slide {
+      padding: 32px 150px 100px;
+
+      .author-box {
+        width: 480px;
+      }
+    }
+
+    .pagination {
+      bottom: 52px;
+      padding: 0 150px;
+    }
+
+    .navigation {
+      padding: 0 $desktop-inner-padding;
+    }
+  }
+
+  .footer-box {
+    padding: 0 $desktop-inner-padding;
+
+    .footer {
+      padding: 32px 54px;
+    }
+  }
+}

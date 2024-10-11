@@ -1,0 +1,26 @@
+[
+    {
+        "img": "/img/main/homepage/work-with/startup.svg",
+        "title": "Стартапы"
+    },
+    {
+        "img": "/img/main/homepage/work-with/factory.svg",
+        "title": "Промышленность"
+    },
+    {
+        "img": "/img/main/homepage/work-with/it.svg",
+        "title": "ИТ-компании"
+    },
+    {
+        "img": "/img/main/homepage/work-with/pr.svg",
+        "title": "PR-агентства"
+    },
+    {
+        "img": "/img/main/homepage/work-with/gov.svg",
+        "title": "Государство"
+    },
+    {
+        "img": "/img/main/homepage/work-with/invest.svg",
+        "title": "Инвестфонды"
+    }
+]

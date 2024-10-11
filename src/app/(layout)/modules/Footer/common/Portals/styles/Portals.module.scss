@@ -1,0 +1,51 @@
+@import '@global-styles-assets/all.scss';
+@import '@layout/styles/assets/all.scss';
+
+.portals-box {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 16px;
+
+    .title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 28px;
+    }
+
+    .portals {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .portals-link {
+        width: auto;
+        border-radius: 8px;
+        display: block;
+        @include layout-logo-interactivity-2;
+    }
+
+    .portal {
+        height: 36px;
+    }
+}
+
+@media #{$tablet-768} {
+    .portals-box {
+        width: fit-content;
+
+        .portals {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        .portal {
+            height: 40px;
+        }
+    }
+}

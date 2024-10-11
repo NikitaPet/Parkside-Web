@@ -1,0 +1,18 @@
+$desktop-inner-padding: $desktop-extra-padding;
+
+$desktop-navigation-height: 64px;
+
+@media #{$desktop-1440} {
+    .wide-nav {
+        .navs {
+            height: $desktop-navigation-height;
+            padding: 0 $desktop-inner-padding;
+            gap: 42px;
+        }
+
+        .loader {
+            bottom: calc(($desktop-navigation-height - $loader-size)/2);
+            right: calc($desktop-inner-padding);
+        }
+    }
+}

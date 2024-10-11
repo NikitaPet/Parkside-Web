@@ -1,0 +1,69 @@
+@import '@global-styles-assets/all.scss';
+@import '@layout/styles/assets/all.scss';
+
+.wrapper {
+    position: relative;
+    border-bottom: 2px solid $white-color-2;
+    padding: 10px 0 12px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    gap: 8px;
+}
+
+.countries {
+    display: flex;
+    gap: 16px;
+
+    .country {
+        position: relative;
+        width: auto;
+
+        .flag {
+            width: auto;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+
+            .flag-icon {
+                width: auto;
+                height: 24px;
+            }
+
+            .selected {
+                position: relative;
+
+                &::after {
+                    background-color: $text-color;
+                    bottom: -2px;
+                    content: '';
+                    display: block;
+                    height: 2px;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                }
+            }
+
+            @include layout-logo-interactivity-2;
+
+            @include mouse-hover {
+                .country-name {
+                    color: $blue-color-2;
+                }
+
+
+                .selected {
+                    &::after {
+                        background-color: $blue-color-2;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@import './Copyright-tablet.module.scss';
+// @import './Copyright-desktop.module.scss';

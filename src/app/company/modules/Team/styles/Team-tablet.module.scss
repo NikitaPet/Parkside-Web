@@ -1,0 +1,22 @@
+@media #{$tablet-768} {
+    .content {
+        color: $black-color;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 16px;
+
+        .departments {
+            padding-left: 0;
+
+            .department {
+                font-weight: 400;
+                font-size: 19px;
+                line-height: 28px;
+            }
+        }
+
+        .stack {
+            padding: 24px;
+        }
+    }
+}

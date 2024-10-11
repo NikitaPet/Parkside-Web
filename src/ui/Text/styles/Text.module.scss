@@ -1,0 +1,50 @@
+@import '@global-styles-assets/all.scss';
+
+.text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+
+    color: $text-color;
+    opacity: $text-color-opacity;
+}
+
+@media #{$mobile-375} {
+    .text {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 24px;
+    }
+}
+
+@media #{$tablet-768} {
+    .text {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 26px;
+    }
+}
+
+@media #{$tablet-1024} {
+    .text {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 26px;
+    }
+}
+
+@media #{$tablet-1280} {
+    .text {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 28px;
+    }
+}
+
+@media #{$desktop-1440} {
+    .text {
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 28px;
+    }
+}

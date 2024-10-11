@@ -1,0 +1,22 @@
+[
+    {
+        "img": "/img/main/homepage/principles/team.jpg",
+        "title": "Гибкая команда",
+        "description": "Подбираем команду под каждый проект, учитывая задачи и бюджет компании"
+    },
+    {
+        "img": "/img/main/homepage/principles/adapt.jpg",
+        "title": "Адаптивность",
+        "description": "Подключаемся к команде заказчика, принимая условия работы в вашей компании"
+    },
+    {
+        "img": "/img/main/homepage/principles/focus.jpg",
+        "title": "Фокус на целях",
+        "description": "Предлагаем решения, развивающие и масштабирующие бизнес"
+    },
+    {
+        "img": "/img/main/homepage/principles/lease.jpg",
+        "title": "Беспроцентная рассрочка",
+        "description": "Предоставляем варианты оплаты в рассрочку или постфактум"
+    }
+]

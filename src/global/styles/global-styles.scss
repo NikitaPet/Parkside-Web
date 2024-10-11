@@ -1,81 +1,68 @@
-@import './assets/all.scss';
 @import './resetting.scss';
 
+@import './assets/all.scss';
+@import './components/all.scss';
 @import './fonts/all.scss';
 
-* {
+$custom-pointer: pointer;
 
-  &,
-  &::before,
-  &::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-  &::before,
-  &::after {
-    user-select: none;
-  }
-
+html {
   &:root {
-    // breakpoints
-    --mobile: $mobile;
-    --tablet: $tablet;
-    --desktop: $desktop;
+    --body-color: $white-color;
+    --bg-color: $white-color;
+    --text-color: $black-color;
   }
 
-  &,
   * {
-    &::-webkit-scrollbar {
-      width: $scrollbar-width;
-      height: $scrollbar-width;
+    box-sizing: border-box;
+
+    &::before,
+    &::after {
+      user-select: none;
     }
 
-    &::-webkit-scrollbar-track {
-      background: transparent
-    }
+    & {
+      &::-webkit-scrollbar {
+        height: $scrollbar-width;
+        width: $scrollbar-width;
+      }
 
-    &::-webkit-scrollbar-thumb {
-      background-color: $blue-color;
+      &::-webkit-scrollbar-track {
+        background: $body-color
+      }
 
-      @include mouse-hover {
-        background-color: $green-color
+      &::-webkit-scrollbar-thumb {
+        background-color: $icon-color;
+
+        @include mouse-hover {
+          background-color: $blue-color
+        }
+      }
+
+      @-moz-document url-prefix() {
+        scrollbar-color: $icon-color $body-color;
+        scrollbar-width: thin;
       }
     }
-
-    @-moz-document url-prefix() {
-      scrollbar-color: $blue-color transparent;
-      scrollbar-width: thin;
-    }
   }
 }
 
-html,
 body {
   height: 100dvh;
-  min-width: $tablet-min-width;
+  min-width: $min-width-device;
+  max-width: $max-width-device;
+  position: relative;
+
   overflow-y: auto;
   overflow-x: hidden;
-  position: relative;
-  line-height: normal;
 
-  font-family: $fonts;
   background-color: $body-color;
-}
-
-#root {
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-  position: relative;
-  line-height: normal;
   font-family: $fonts;
+  line-height: normal;
 }
 
 div {
   width: 100%;
-  overflow-x: hidden;
 }
 
 input,
@@ -103,7 +90,6 @@ img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
   object-fit: contain;
 }
 

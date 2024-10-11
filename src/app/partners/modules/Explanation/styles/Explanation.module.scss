@@ -1,0 +1,116 @@
+@import '@global-styles-assets/all.scss';
+
+:export {
+    card-color: $white-color-2;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: $black-color;
+
+    .cards-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .card {
+            position: relative;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 12px;
+            padding: 16px;
+            background: $white-color-2;
+            border-radius: 8px;
+
+            .num {
+                display: block;
+                height: fit-content;
+                font-weight: 600;
+                font-size: 42px;
+                line-height: 42px;
+            }
+
+            .card-text {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+
+                .postscript {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 16px;
+
+
+                }
+
+                span {
+                    color: $red-color-1;
+                }
+            }
+
+            .bridge-svg {
+                z-index: 10;
+                position: absolute;
+
+                width: 16px;
+                height: 40px;
+                bottom: -25px;
+                padding-left: 18px;
+            }
+
+            &:last-child {
+                .bridge-svg {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media #{$mobile-375} {
+    .content {
+        .cards-list {
+            gap: 24px;
+
+            .card {
+                gap: 12px;
+                padding: 24px 16px;
+
+                .card-text {
+                    gap: 12px;
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+
+                .bridge-svg {
+                    width: 16px;
+                    height: 40px;
+                    bottom: -30px;
+                    padding-left: 18px;
+                }
+            }
+        }
+    }
+}
+
+@import './Explanation-tablet.module.scss';
+@import './Explanation-desktop.module.scss';

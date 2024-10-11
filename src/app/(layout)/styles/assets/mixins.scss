@@ -1,0 +1,308 @@
+@import '@global-styles-assets/all.scss';
+
+@mixin layout-logo-interactivity-1 {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: -8px;
+        top: -8px;
+        right: -8px;
+        border: 2px solid transparent;
+        border-radius: inherit;
+        pointer-events: none;
+    }
+
+    &:focus-visible {
+        &::after {
+            border-color: $icon-color;
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $grey-color-1;
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+@mixin layout-logo-interactivity-2 {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: -8px;
+        top: -8px;
+        right: -8px;
+        border: 2px solid transparent;
+        border-radius: inherit;
+        pointer-events: none;
+    }
+
+    &:focus-visible {
+        &::after {
+            border-color: $icon-color;
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $grey-color-1;
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+@mixin layout-button-interactivity-1 {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: -8px;
+        top: -8px;
+        right: -8px;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        pointer-events: none;
+    }
+
+    &:focus-visible {
+        &::after {
+            border-color: $blue-color-4;
+        }
+    }
+
+    @include mouse-hover {
+        color: $blue-color-2;
+    }
+
+    &:active {
+        color: $blue-color-3;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $grey-color-1;
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+@mixin layout-button-interactivity-2 {
+    // border: 2px solid transparent;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: -8px;
+        top: -8px;
+        right: -8px;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        pointer-events: none;
+    }
+
+    &:focus-visible {
+        &::after {
+            border-color: $blue-color-4;
+        }
+    }
+
+    @include mouse-hover {
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: $blue-color-3;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $grey-color-1;
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+@mixin layout-button-interactivity-3 {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: -8px;
+        top: -8px;
+        right: -8px;
+        border: 2px solid transparent;
+        border-radius: 10px;
+        pointer-events: none;
+    }
+
+    &:focus-visible {
+        &::after {
+            border-color: $blue-color-4;
+        }
+    }
+
+    @include mouse-hover {
+        color: $blue-color-2;
+    }
+
+    &:active {
+        color: $blue-color-3;
+    }
+}
+
+@mixin layout-icon-interactivity-1 {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        border: 2px solid transparent;
+        border-radius: inherit;
+        pointer-events: none;
+    }
+
+    &:focus-visible {
+        &::after {
+            border-color: $icon-color;
+        }
+    }
+
+    @include mouse-hover {
+        background: $grey-color-2;
+    }
+
+    &:active {
+        background: $grey-color-1;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $grey-color-1;
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+@mixin layout-icon-interactivity-2 {
+    @include layout-icon-interactivity-1;
+
+    @include mouse-hover {
+        background: $blue-color-5;
+    }
+
+    &:active {
+        background: $blue-color-6;
+    }
+
+    &:focus-visible {
+        background: $blue-color-5;
+
+        &::after {
+            border-color: $blue-color-4;
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        visibility: hidden;
+        pointer-events: none;
+    }
+}
+
+@mixin div-interactivity {
+    // border: 2px solid transparent;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        top: 0;
+        right: 0;
+        border: 2px solid transparent;
+        border-radius: inherit;
+        pointer-events: none;
+    }
+
+    &:focus-visible {
+        &::after {
+            border-color: $icon-color;
+        }
+    }
+
+    @include mouse-hover {
+        background: $grey-color-2;
+    }
+
+    &:active {
+        background: $grey-color-1;
+    }
+
+    &.disabled,
+    &:disabled {
+        color: $grey-color-1;
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+@mixin social-icon-interactivity-1 {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: -4px;
+        top: -4px;
+        right: -4px;
+        border: 2px solid transparent;
+        border-radius: inherit;
+        pointer-events: none;
+    }
+
+    &:focus-visible {
+        &::after {
+            border-color: $icon-color;
+        }
+    }
+
+    @include mouse-hover {
+        opacity: 0.2;
+    }
+
+    &:active {
+        opacity: 1;
+    }
+
+    &.disabled,
+    &:disabled {
+        visibility: hidden;
+    }
+}

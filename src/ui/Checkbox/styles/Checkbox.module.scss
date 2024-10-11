@@ -1,0 +1,47 @@
+@import '@global-styles-assets/all.scss';
+@import './mixins.scss';
+
+.wrapper {
+    width: fit-content;
+    height: fit-content;
+    padding: 0 8px 0 0;
+    align-items: flex-start;
+    cursor: pointer;
+
+    .custom-checkbox-wrapper {
+        border: 2px solid transparent;
+    }
+
+    @include checkbox-interactivity
+}
+
+.input {
+    display: none;
+}
+
+.custom-checkbox-wrapper {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 4px;
+
+    .custom-checkbox {
+        align-items: center;
+        background-color: $white-color-2;
+        border: 0;
+        border-radius: 4px;
+        display: flex;
+        height: 20px;
+        flex: 0 0 20px;
+        justify-content: center;
+        width: 20px;
+
+        .icon {
+            display: none;
+        }
+    }
+}
+
+
+.input:checked+* .icon {
+    display: block;
+}

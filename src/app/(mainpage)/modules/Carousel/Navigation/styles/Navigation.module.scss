@@ -1,0 +1,227 @@
+@import '@global-styles-assets/all.scss';
+@import '@layout/styles/assets/all.scss';
+@import '@layout/modules/Footer/styles/assets/all.scss';
+
+$mobile-inner-padding: $mobile-extra-padding;
+
+$mobile-navigation-height: 56px;
+
+$wide-nav-min-width: $tablet-768;
+
+
+
+$loader-size: 12px;
+$progress: var(--loader-progress);
+$progress-circle-length: 64;
+
+$arrow-size: 24px;
+
+:export {
+    progress-circle-length: $progress-circle-length;
+}
+
+
+
+.wrapper {
+    position: absolute;
+    bottom: 0;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: $white-color;
+}
+
+.slim-nav {
+    height: 100%;
+    width: 100%;
+    display: block;
+
+    @media #{$wide-nav-min-width} {
+        display: none;
+    }
+
+    .navs {
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+        height: $mobile-navigation-height;
+
+        padding: 0px $mobile-inner-padding;
+        display: flex;
+        justify-content: center;
+
+        gap: 42px;
+        background-color: rgba(0, 0, 0, 0.7);
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            white-space: nowrap;
+        }
+    }
+
+    .arrow {
+        z-index: 30;
+        position: absolute;
+        bottom: calc(($mobile-navigation-height - $arrow-size)/2);
+        right: 24px;
+
+        height: $arrow-size;
+        width: auto;
+        // padding: 4px;
+        border-radius: 10px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+
+        &.reverse {
+            transform: scale(-1, -1);
+            right: unset;
+            left: 24px;
+        }
+    }
+
+    .interaction-nav-button {
+        // border: 2px solid transparent;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: -4px;
+            top: -4px;
+            right: -4px;
+            border: 2px solid transparent;
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        &:focus-visible {
+            &::after {
+                border-color: $blue-color-4;
+            }
+        }
+
+        &.disabled,
+        &:disabled {
+            color: $grey-color-1;
+            pointer-events: none;
+            cursor: default;
+        }
+    }
+}
+
+.wide-nav {
+    height: 100%;
+    width: 100%;
+    display: none;
+
+    @media #{$wide-nav-min-width} {
+        display: block;
+    }
+
+    .navs {
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+
+        height: $mobile-navigation-height;
+        padding: 0 $mobile-inner-padding;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 32px;
+
+        background-color: rgba(0, 0, 0, 0.7);
+
+        .nav {
+            opacity: 0.5;
+            white-space: nowrap;
+            cursor: pointer;
+            border-radius: 10px;
+
+            @include mouse-hover {
+                opacity: 1;
+            }
+        }
+
+        .active {
+            opacity: 1;
+        }
+
+        .interaction-nav-button {
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                opacity: 1;
+                content: '';
+                position: absolute;
+                bottom: -4px;
+                left: -4px;
+                top: -4px;
+                right: -4px;
+                border: 2px solid transparent;
+                border-radius: inherit;
+                pointer-events: none;
+            }
+
+            &:focus-visible {
+                &::after {
+                    border-color: $blue-color-4;
+                }
+            }
+
+            @include mouse-hover {
+                color: $blue-color-2;
+            }
+
+            &.disabled,
+            &:disabled {
+                color: $grey-color-1;
+                pointer-events: none;
+                cursor: default;
+            }
+        }
+    }
+
+    .loader {
+        z-index: 20;
+        position: absolute;
+        bottom: calc(($mobile-navigation-height - $loader-size)/2);
+        right: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: $loader-size;
+        width: auto;
+        aspect-ratio: 1;
+
+        svg {
+            position: absolute;
+            height: 100%;
+            stroke-width: 4px;
+            stroke: $white-color;
+            fill: none;
+            transform: rotate(-90deg);
+
+            stroke-dasharray: $progress-circle-length;
+            stroke-dashoffset: calc($progress-circle-length * (1 - $progress));
+            stroke-width: 4;
+        }
+    }
+}
+
+@import './Navigation-tablet.module.scss';
+@import './Navigation-desktop.module.scss';

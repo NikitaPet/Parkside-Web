@@ -1,0 +1,11 @@
+$desktop-inner-padding: $desktop-extra-padding;
+
+@media #{$desktop-1440} {
+    .sections {
+        padding: 0
+    }
+
+    .button-box {
+        padding: 0
+    }
+}

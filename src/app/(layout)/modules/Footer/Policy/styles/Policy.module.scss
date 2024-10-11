@@ -1,0 +1,46 @@
+@import '@global-styles-assets/all.scss';
+@import '@layout/styles/assets/all.scss';
+
+.wrapper {
+    z-index: 500;
+    width: 100%;
+    background-color: $bg-color;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.policy {
+    display: block;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 0;
+
+    .link-box {
+        width: auto;
+        // padding: 4px;
+    }
+
+    .link {
+        height: fit-content;
+        width: fit-content;
+        display: block;
+        // padding: 2px 4px;
+        border-radius: 10px;
+
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .layout-interaction-button {
+        @include layout-button-interactivity-1;
+    }
+}
+
+@import './Policy-tablet.module.scss';
+@import './Policy-desktop.module.scss';

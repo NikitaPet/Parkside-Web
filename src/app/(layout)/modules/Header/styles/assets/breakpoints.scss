@@ -1,0 +1,7 @@
+@import '@global-styles-assets/breakpoints.scss';
+
+$fixed-nav-screen-min-width: $tablet-1024;
+
+:export {
+    fixed-nav-screen-min-width: $fixed-nav-screen-min-width;
+}

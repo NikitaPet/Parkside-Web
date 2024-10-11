@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Backend-разработчики",
+        "stack": [
+            { "img": "/img/main/company/stack/python.svg" },
+            { "img": "/img/main/company/stack/django.svg" },
+            { "img": "/img/main/company/stack/wagtail.svg" }
+        ]
+    },
+    {
+        "name": "Frontend-разработчики",
+        "stack": [
+            { "img": "/img/main/company/stack/react.svg" },
+            { "img": "/img/main/company/stack/angular.svg" },
+            { "img": "/img/main/company/stack/vue.svg" },
+            { "img": "/img/main/company/stack/stimulus.svg" },
+            { "img": "/img/main/company/stack/js.svg" },
+            { "img": "/img/main/company/stack/ts.svg" },
+            { "img": "/img/main/company/stack/sass.svg" },
+            { "img": "/img/main/company/stack/wordpress.svg" },
+            { "img": "/img/main/company/stack/components.svg" }
+        ]
+    },
+    {
+        "name": "Мобильные разработчики",
+        "stack": [{ "img": "/img/main/company/stack/kotlin.svg" }]
+    },
+    {
+        "name": "QA-инженеры",
+        "stack": [
+            { "img": "/img/main/company/stack/junit.svg" },
+            { "img": "/img/main/company/stack/gradle.svg" },
+            { "img": "/img/main/company/stack/selenium.svg" },
+            { "img": "/img/main/company/stack/hibernate.svg" },
+            { "img": "/img/main/company/stack/jmeter.svg" }
+        ]
+    },
+    {
+        "name": "UX-дизайнеры",
+        "stack": [
+            { "img": "/img/main/company/stack/figma.svg" },
+            { "img": "/img/main/company/stack/ai.svg" },
+            { "img": "/img/main/company/stack/xd.svg" },
+            { "img": "/img/main/company/stack/ae.svg" }
+        ]
+    },
+    {
+        "name": "Системные аналитики",
+        "stack": [
+            { "img": "/img/main/company/stack/confluence.svg" },
+            { "img": "/img/main/company/stack/miro.svg" },
+            { "img": "/img/main/company/stack/w.svg" },
+            { "img": "/img/main/company/stack/jira.svg" },
+            { "img": "/img/main/company/stack/t.svg" }
+        ]
+    },
+    {
+        "name": "Проджект-менеджеры",
+        "stack": [
+            { "img": "/img/main/company/stack/jira.svg" },
+            { "img": "/img/main/company/stack/t.svg" },
+            { "img": "/img/main/company/stack/trello.svg" },
+            { "img": "/img/main/company/stack/office.svg" }
+        ]
+    }
+]

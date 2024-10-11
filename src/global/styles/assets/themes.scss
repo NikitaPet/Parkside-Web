@@ -1,0 +1,11 @@
+$body-color: var(--body-color);
+$bg-color: var(--bg-color);
+$text-color: var(--text-color);
+$icon-color: var(--icon-color);
+
+:export {
+    body-color: $body-color;
+    bg-color: $bg-color;
+    text-color: $text-color;
+    icon-color: $icon-color;
+}

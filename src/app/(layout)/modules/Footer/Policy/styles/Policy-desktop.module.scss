@@ -1,0 +1,11 @@
+@media #{$desktop-1440} {
+    .list {
+        .link-box {
+            padding: 0 16px;
+
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+}

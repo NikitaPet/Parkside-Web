@@ -1,0 +1,40 @@
+$desktop-inner-padding: $desktop-extra-padding;
+
+$desktop-navigation-height: 64px;
+
+@media #{$desktop-1440} {
+    .wrapper {
+        padding: 0 $module-base-padding !important;
+    }
+
+    .content {
+        border-radius: 20px;
+    }
+
+    .slide {
+        min-height: 640px;
+        padding: 120px $desktop-inner-padding;
+        padding-bottom: max(120px, $desktop-navigation-height);
+
+        .title {
+            max-width: 640px;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 52px;
+            line-height: 68px;
+        }
+
+        .text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 28px;
+        }
+
+        .button {
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 22.8px;
+        }
+    }
+}

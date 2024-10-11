@@ -1,0 +1,65 @@
+@import '@global-styles-assets/all.scss';
+
+@media #{$tablet-768} {
+  .wrapper {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .list {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 28px;
+  }
+
+  .img-box {
+    .img {
+      width: 80px;
+    }
+  }
+}
+
+@media #{$tablet-1024} {
+  .list {
+    gap: 36px;
+  }
+
+  .img-box {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .img {
+      width: 100px;
+    }
+  }
+}
+
+@media #{$tablet-1280} {
+  .wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .text {
+    max-width: 274px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .list {
+    // width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 32px;
+  }
+}

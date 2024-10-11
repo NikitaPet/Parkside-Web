@@ -1,0 +1,29 @@
+@import '@global-styles-assets/all.scss';
+
+@mixin text-field-interactivity {
+    position: relative;
+    cursor: pointer;
+
+    &:focus-visible {
+        border-color: $icon-color;
+        border-color: $blue-color-1;
+    }
+
+    &.disabled,
+    &:disabled {
+        pointer-events: none;
+
+        &::placeholder {
+            color: $grey-color-1;
+        }
+    }
+
+    &::placeholder {
+        color: $black-color;
+        opacity: $text-color-opacity;
+    }
+
+    &.error {
+        border: 2px solid $red-color-1;
+    }
+}

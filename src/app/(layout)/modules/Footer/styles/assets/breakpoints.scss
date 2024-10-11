@@ -1,0 +1,7 @@
+@import '@global-styles-assets/breakpoints.scss';
+
+$expanded-nav-screen-min-width: $tablet-768;
+
+:export {
+    expanded-nav-screen-min-width: $expanded-nav-screen-min-width;
+}

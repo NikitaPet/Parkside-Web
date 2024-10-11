@@ -1,0 +1,42 @@
+@import '@global-styles-assets/all.scss';
+
+.partners {
+    border-bottom: 2px solid $white-color-2;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 24px 0;
+
+    .partners {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        display: none;
+        margin-bottom: 16px;
+
+        font-style: normal;
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 28px;
+    }
+
+    .cloud {
+        width: auto;
+        height: 44px
+    }
+
+    .portals {
+        display: none;
+    }
+}
+
+@media #{$mobile-375} {
+    .partners {
+        padding: 32px 0;
+        padding-bottom: 24px;
+    }
+}
+
+@import './Partners-tablet.module.scss';
+@import './Partners-desktop.module.scss';

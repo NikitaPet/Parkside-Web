@@ -1,0 +1,32 @@
+$desktop-inner-padding: $desktop-extra-padding;
+
+@media #{$desktop-1440} {
+    .wrapper {
+        padding: 0 $module-base-padding !important;
+    }
+
+    .content {
+        border-radius: 20px;
+    }
+
+    .slide {
+        min-height: 640px;
+        padding: 92px $desktop-inner-padding;
+
+        .slide-content {
+            gap: 32px;
+        }
+
+        .title {
+            font-size: 52px;
+            font-weight: 600;
+            line-height: 68px;
+        }
+
+        .text {
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+[
+    {
+        "img": "/img/main/homepage/services/laptop.svg",
+        "title": "Разработка \n IT-продуктов",
+        "url": "/services",
+        "description": [
+            "– Веб-сайты разного уровня сложности",
+            "– Веб- и мобильные приложения",
+            "– Highload-cистемы"
+        ]
+    },
+
+    {
+        "img": "/img/main/homepage/services/analytics.svg",
+        "title": "Аналитика и тестирование",
+        "url": "/services",
+        "description": ["– Системная аналитика", "– Обеспечение качества"]
+    },
+
+    {
+        "img": "/img/main/homepage/services/design.svg",
+        "title": "Продуктовый дизайн",
+        "url": "/services",
+        "description": [
+            "– Пользовательские исследования",
+            "– Дизайн сайтов и приложений",
+            "– Разработка интерфейсов"
+        ]
+    },
+
+    {
+        "img": "/img/main/homepage/services/support.svg",
+        "title": "Сопровождение и развитие",
+        "url": "/services",
+        "description": ["– Поддержка IT-проектов", "– IT-консалтинг", "– Оцифровка офлайн-бизнеса"]
+    }
+]

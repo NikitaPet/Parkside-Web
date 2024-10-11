@@ -1,0 +1,56 @@
+@media #{$tablet-768} {
+    .wrapper {
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        column-gap: 48px;
+        row-gap: 24px;
+
+        .column {
+            width: 280px;
+            row-gap: 24px;
+
+            .contact {
+                .subtitle {
+                    font-weight: 500;
+                    font-size: 19px;
+                    line-height: 28px;
+                }
+
+                .text {
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+
+                .subtext {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$tablet-1024} {
+    .content {
+        column-gap: 42px;
+    }
+}
+
+@media #{$tablet-1280} {
+    .content {
+        .column {
+            width: 360px;
+        }
+    }
+}

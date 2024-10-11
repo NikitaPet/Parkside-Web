@@ -1,0 +1,111 @@
+@import '@global-styles-assets/all.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .title {
+        display: inline;
+    }
+
+    .description {
+        display: inline;
+    }
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    .service {
+        position: relative;
+        height: 100%;
+        min-height: 260px;
+        border-radius: 8px;
+
+        padding: 16px 16px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        background-color: $white-color-2;
+
+        .img {
+            height: 68px;
+            width: 68px;
+        }
+
+        .text-box {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .title {
+                white-space: pre-line;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 24px;
+            }
+
+            .points {
+                display: flex;
+                flex-direction: column;
+
+                .point {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+            }
+
+            .description {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+                white-space: pre-line;
+            }
+        }
+    }
+}
+
+@media #{$mobile-375} {
+    .services {
+        .service {
+            .text-box {
+                .title {
+                    font-size: 19px;
+                    font-weight: 500;
+                    line-height: 26px;
+                }
+
+                .points {
+                    .point {
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 22px;
+                    }
+                }
+
+                .description {
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+            }
+        }
+    }
+}
+
+@import './Services-tablet.module.scss';
+@import './Services-desktop.module.scss';

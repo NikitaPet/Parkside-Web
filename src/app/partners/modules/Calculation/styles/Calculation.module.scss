@@ -1,0 +1,137 @@
+@import '@global-styles-assets/all.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: $black-color;
+
+    .cards-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 16px;
+            padding-bottom: 32px;
+            background: $white-color-2;
+            border-radius: 8px;
+
+            white-space: pre-wrap;
+
+            .title {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 26px;
+                text-align: left;
+            }
+
+            .card-text {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+
+            .card-list {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .card-list-point {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .img {
+                width: 68px;
+                height: auto;
+                aspect-ratio: 1
+            }
+
+            .postscript {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 16px;
+            }
+
+            span {
+                color: $red-color-1;
+            }
+
+            b {
+                white-space: pre-wrap;
+                padding: 0 2px;
+            }
+
+            h3 {
+                white-space: pre-wrap;
+            }
+        }
+    }
+
+    .description {
+        max-width: 860px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+}
+
+
+
+@media #{$mobile-375} {
+    .content {
+        gap: 24px;
+
+        .cards-list {
+            gap: 24px;
+
+            .card {
+                gap: 12px;
+
+                .title {
+                    font-size: 19px;
+                    font-weight: 500;
+                    line-height: 28px;
+                }
+
+                .card-text {
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+            }
+        }
+
+        .description {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+    }
+}
+
+
+@import './Calculation-tablet.module.scss';
+@import './Calculation-desktop.module.scss';

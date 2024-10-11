@@ -1,0 +1,104 @@
+@media #{$tablet-768} {
+    .wrapper {
+        gap: 32px;
+    }
+
+    .content {
+        .cards-list {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+
+            .card {
+                display: grid;
+                grid-template-columns: unset;
+                grid-template-rows: auto 1fr;
+                gap: 16px;
+                padding: 24px;
+
+                &>* {
+                    &:nth-child(2) {
+                        grid-row-start: 2;
+                        grid-row-end: 3;
+                    }
+
+                    &:nth-child(3) {
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                    }
+                }
+
+                .card-text {
+                    font-size: 15px;
+                    font-weight: 400;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$tablet-1024} {
+    .content {
+        .cards-list {
+            .card {
+                display: grid;
+                grid-template-rows: 1fr auto;
+                grid-template-rows: auto 1fr;
+                padding: 32px 24px;
+
+                &>* {
+                    &:nth-child(1) {
+                        grid-row-start: 2;
+                        grid-row-end: 3;
+                        grid-column-end: 1;
+                        grid-column-start: 2;
+                    }
+
+                    &:nth-child(2) {
+                        grid-row-start: 2;
+                        grid-row-end: 3;
+                        grid-column-end: 2;
+                        grid-column-start: 3;
+                    }
+
+                    &:nth-child(3) {
+                        grid-row-start: 1;
+                        grid-row-end: 2;
+                        grid-column-end: 1;
+                        grid-column-start: 3;
+                    }
+                }
+
+                .num {
+                    display: block;
+                    font-size: 42px;
+                    font-weight: 600;
+                    line-height: 42px;
+                }
+            }
+        }
+    }
+}
+
+@media #{$tablet-1280} {
+    .content {
+        .cards-list {
+            .card {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                grid-template-rows: unset;
+                gap: 12px;
+
+                &>* {
+                    &:nth-child(n) {
+                        grid-row-start: unset;
+                        grid-row-end: unset;
+                        grid-column-end: unset;
+                        grid-column-start: unset;
+                    }
+                }
+            }
+        }
+    }
+}

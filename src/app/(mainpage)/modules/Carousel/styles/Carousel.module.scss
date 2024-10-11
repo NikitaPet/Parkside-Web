@@ -1,0 +1,93 @@
+@import '@global-styles-assets/all.scss';
+
+$mobile-inner-padding: $mobile-extra-padding;
+
+$mobile-navigation-height: 56px;
+
+
+
+.wrapper {
+    margin-top: 0 !important;
+    padding: 0 $module-base-padding !important;
+    // margin-top: 64px;
+    overflow: visible;
+}
+
+.content {
+    overflow: hidden;
+}
+
+.slider {
+    height: 100%;
+}
+
+.slide {
+    position: relative;
+    height: 100%;
+    min-height: 470px;
+
+    padding: 48px $mobile-inner-padding;
+    padding-bottom: calc(24px + $mobile-navigation-height);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 24px;
+
+    background-color: $black-color;
+    background-position: center center;
+    background-size: cover;
+
+    .title {
+        max-width: 480px;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 42px;
+        color: $white-color;
+    }
+
+    .text {
+        max-width: 480px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        color: $white-color;
+        opacity: 1;
+    }
+
+    .button {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+@media #{$mobile-375} {
+    .slide {
+        min-height: 526px;
+        padding-top: 64px;
+        gap: 32px;
+
+        .title {
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 42px;
+        }
+
+        .text {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        .button {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}
+
+@import './Carousel-tablet.module.scss';
+@import './Carousel-desktop.module.scss';

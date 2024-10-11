@@ -1,7 +1,6 @@
 @import './breakpoints.scss';
-@import './parameters.scss';
+@import './params.scss';
 @import './colors.scss';
+@import './themes.scss';
 @import './mixins.scss';
 
-$custom-pointer: pointer;
-// $custom-pointer: url(/public/cursor/custom-pointer.svg), pointer;

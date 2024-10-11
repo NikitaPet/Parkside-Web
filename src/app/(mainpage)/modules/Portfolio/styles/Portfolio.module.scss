@@ -1,0 +1,63 @@
+@import '@global-styles-assets/all.scss';
+
+.wrapper {
+  margin-bottom: 64px;
+  overflow: visible;
+}
+
+.portfolio {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  border-radius: 16px;
+  background: $white-color;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  .description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    white-space: pre-line;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .button {
+    align-self: flex-start;
+    margin-top: 8px;
+  }
+}
+
+@import './Portfolio-tablet.module.scss';
+@import './Portfolio-desktop.module.scss';

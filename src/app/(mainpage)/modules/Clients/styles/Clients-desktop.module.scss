@@ -1,0 +1,17 @@
+@import '@global-styles-assets/all.scss';
+
+@media #{$desktop-1440} {
+    .list {
+        gap: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .img-box {
+        .img {
+            width: 170px;
+            height: 80px;
+        }
+    }
+}

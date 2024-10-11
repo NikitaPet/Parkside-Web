@@ -1,0 +1,100 @@
+@import '@global-styles-assets/all.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content {
+    color: $black-color;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .departments {
+        padding-bottom: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .department {
+            position: relative;
+            width: fit-content;
+            display: inline-block;
+
+            // border-bottom: 2px solid transparent;
+
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 28px;
+
+            cursor: pointer;
+
+            &.active {
+
+                // border-bottom: 2px solid $black-color;
+                &::after {
+                    border-bottom: solid 2px $text-color;
+                }
+            }
+
+            &::after {
+                content: '';
+                width: 100%;
+                bottom: -4px;
+                left: 0;
+                position: absolute;
+                pointer-events: none;
+                border-bottom: solid 2px transparent;
+            }
+        }
+    }
+
+    .stack {
+        padding: 24px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+
+        background: $white-color-2;
+        border-radius: 8px;
+
+
+        .stack-img {
+            width: 170px;
+            height: 100px;
+        }
+    }
+}
+
+
+
+@media #{$mobile-375} {
+    .content {
+        .departments {
+            gap: 12px;
+        }
+
+        .stack {
+            padding: 24px 0;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+        }
+    }
+}
+
+@import './Team-tablet.module.scss';
+@import './Team-desktop.module.scss';

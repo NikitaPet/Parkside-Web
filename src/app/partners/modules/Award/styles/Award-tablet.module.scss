@@ -1,0 +1,27 @@
+@media #{$tablet-768} {
+    .wrapper {
+        gap: 32px;
+    }
+
+    .content {
+
+        .cards-list,
+        .sub-cards-list {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            column-gap: 16px;
+        }
+    }
+}
+
+@media #{$tablet-1024} {
+    .content {
+
+        .cards-list,
+        .sub-cards-list {
+            gap: 24px;
+            column-gap: 24px;
+        }
+    }
+}

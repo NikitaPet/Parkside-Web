@@ -1,0 +1,26 @@
+@media #{$tablet-768} {
+    .content {
+        .cards-list {
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+
+            .card {
+                gap: 16px;
+                padding: 24px;
+            }
+        }
+    }
+}
+
+@media #{$tablet-1280} {
+    .content {
+        .cards-list {
+            .card {
+                display: grid;
+                grid-template-rows: unset;
+                grid-template-columns: auto 1fr;
+            }
+        }
+    }
+}

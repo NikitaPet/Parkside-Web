@@ -1,0 +1,59 @@
+@import '@global-styles-assets/all.scss';
+
+$tablet-inner-padding: $tablet-extra-padding;
+
+@media #{$tablet-768} {
+    .wrapper {
+        padding-top: 32px !important;
+        gap: 32px;
+    }
+
+    .sections {
+        padding: 0 68px;
+        gap: 32px;
+    }
+
+    .section {
+        .section-title {
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 32px;
+        }
+
+        .text {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+    }
+
+    .button-box {
+        padding: 0 68px;
+
+        .button {
+            width: 236px;
+        }
+    }
+}
+
+@media #{$tablet-1024} {
+    .section {
+        gap: 8px;
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 36px;
+        }
+    }
+}
+
+@media #{$tablet-1280} {
+    .section {
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 54px;
+        }
+    }
+}

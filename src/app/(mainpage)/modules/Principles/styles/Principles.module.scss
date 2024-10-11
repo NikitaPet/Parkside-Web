@@ -1,0 +1,91 @@
+@import '@global-styles-assets/all.scss';
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.info {
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  .title {
+    display: inline;
+  }
+
+  .description {
+    display: inline;
+    white-space: pre-line;
+  }
+}
+
+.principles {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  .principle {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    // gap: 8px;
+
+    .title-box {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .img {
+        height: 166px;
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        white-space: pre-line;
+      }
+    }
+
+    .description {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+}
+
+@media #{$mobile-375} {
+  .principles {
+    .principle {
+      .title-box {
+        .img {
+          height: 200px;
+        }
+
+        .title {
+          font-size: 19px;
+          font-weight: 500;
+          line-height: 26px;
+        }
+      }
+
+      .description {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+      }
+    }
+
+
+  }
+}
+
+@import './Principles-tablet.module.scss';
+@import './Principles-desktop.module.scss';

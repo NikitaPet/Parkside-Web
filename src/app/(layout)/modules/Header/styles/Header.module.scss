@@ -1,0 +1,27 @@
+@import '@global-styles-assets/all.scss';
+@import '@layout/modules/Header/styles/assets/all.scss';
+
+.wrapper {
+    z-index: 10000;
+    margin-top: 0 !important;
+    width: 100%;
+
+    height: $mobile-header-height;
+
+    padding: 0 !important;
+    background-color: $bg-color;
+    overflow: visible !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: height 0.5s;
+}
+
+@media #{$tablet-768} {
+    .wrapper {
+        height: $tablet-header-height;
+    }
+}

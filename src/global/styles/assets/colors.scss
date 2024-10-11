@@ -1,16 +1,41 @@
 // basic colors
 
-$body-color: #F4F7FE;
+$black-color-1: #000;
+$black-color-2: #0000001f;
+$black-color-3: #1f1f1f;
+$grey-color-1: #cecece;
+$grey-color-2: #f9f9f9;
+$grey-color-3: #8D8D8D;
+$white-color-1: #fff;
+$white-color-2: #f3f3f3;
+$blue-color-1: #0062ff;
+$blue-color-2: #3381ff;
+$blue-color-3: #004ecc;
+$blue-color-4: #99c0ff;
+$blue-color-5: #e5efff;
+$blue-color-6: #b3d0ff;
+$red-color-1: #ff3d2e;
+$green-color-1: #3c9a44;
 
-$white-color: #FFFFFF;
-$black-color: #000000;
-$grey-color: #959CA9;
-$blue-color: #2451B2;
-$green-color: #30b224;
+$white-color: $white-color-1;
+$black-color: $black-color-1;
+$blue-color: $blue-color-1;
+$red-color: $red-color-1;
+$green-color: $green-color-1;
 
-// 
+$text-color-opacity: 0.48;
 
 :export {
+    black-color: $black-color;
     white-color: $white-color;
     blue-color: $blue-color;
+    red-color: $red-color;
+    green-color: $green-color;
+    // 
+    white-color-2: $white-color-2;
+    black-color-1: $black-color-1;
+    black-color-3: $black-color-3;
+    grey-color-3: $grey-color-3;
+    // 
+    text-color-opacity: $text-color-opacity
 }

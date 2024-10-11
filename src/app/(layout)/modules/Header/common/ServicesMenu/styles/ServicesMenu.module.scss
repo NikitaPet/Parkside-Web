@@ -1,0 +1,139 @@
+@import '@global-styles-assets/all.scss';
+@import '@layout/styles/assets/all.scss';
+
+.wrapper {
+    width: 100%;
+    padding: 0;
+    padding-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: $text-color;
+}
+
+.info {
+    width: min-content;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 16px;
+
+    .layout-interaction-button {
+        height: fit-content;
+        width: fit-content;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        border-radius: 10px;
+
+        @include layout-button-interactivity-1;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+
+        .link {
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 100%;
+                border-bottom: 2px solid $text-color;
+                bottom: -4px;
+                left: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+        }
+
+        .arrow {
+            width: auto;
+            height: 24px;
+            aspect-ratio: 1;
+        }
+    }
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .service {
+        position: relative;
+        height: 100%;
+        border-radius: 8px;
+        // padding: 8px;
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 12px;
+
+        @include div-interactivity;
+
+        &>* {
+            &:nth-child(1) {
+                grid-row: 1 / 3;
+            }
+        }
+
+        .img {
+            height: 68px;
+            width: 68px;
+        }
+
+        .title {
+            white-space: pre-line;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        .points {
+            display: flex;
+            flex-direction: column;
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+
+            color: $text-color;
+            opacity: $text-color-opacity;
+        }
+    }
+}
+
+@media #{$mobile-375} {
+    .wrapper {
+        padding-top: 16px;
+    }
+
+    .info {
+        .layout-interaction-button {
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+    }
+
+    .services {
+        .service {
+            .title {
+                font-size: 19px;
+                font-weight: 500;
+                line-height: 28px;
+            }
+
+            .points {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+@import './ServicesMenu-tablet.module.scss';
+@import './ServicesMenu-desktop.module.scss';

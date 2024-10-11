@@ -1,0 +1,44 @@
+@media #{$tablet-768} {
+    .values {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        .value {
+            padding: 32px 24px;
+            gap: 16px;
+        }
+
+    }
+}
+
+@media #{$tablet-1280} {
+    .values {
+        .value {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr;
+
+            &>* {
+                &:nth-child(1) {
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+                }
+            }
+
+            gap: 24px;
+
+            .title {
+                font-weight: 500;
+                font-size: 19px;
+                line-height: 28px;
+            }
+
+            .description {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@media #{$desktop-1440} {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .values {
+        gap: 48px;
+
+        .value {
+            .title {
+                font-weight: 500;
+                font-size: 19px;
+                line-height: 28px;
+            }
+
+            .description {
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import '@global-styles-assets/all.scss';
+@import './mixins.scss';
+
+.input {
+    border-radius: 4px;
+    border: 2px solid transparent;
+    padding: 16px;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+
+    color: $black-color;
+    background-color: $white-color-2;
+
+    @include text-field-interactivity;
+}
+
+@media #{$mobile-375} {
+    .input {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}
+
+@media #{$tablet-768} {
+    .input {
+        padding: 16px 24px;
+    }
+}

@@ -1,0 +1,73 @@
+@import '@global-styles-assets/all.scss';
+
+$tablet-inner-padding: $tablet-extra-padding;
+
+@media #{$tablet-768} {
+    .wrapper {
+        margin-top: 64px;
+        padding: 0 calc($module-base-padding + $tablet-inner-padding) !important;
+    }
+
+    .title {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .slide {
+        border-radius: 16px;
+        padding: 54px 68px;
+
+        .slide-content {
+            gap: 32px;
+
+            .heading {
+                gap: 8px;
+            }
+        }
+
+        .salary {
+            font-size: 26px;
+            font-weight: 600;
+            line-height: 32px;
+        }
+
+        .experience,
+        .conditions {
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 28px;
+        }
+    }
+}
+
+@media #{$tablet-1024} {
+    .wrapper {
+        gap: 28px;
+    }
+
+    .slide {
+        .salary {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 36px;
+        }
+    }
+}
+
+@media #{$tablet-1280} {
+    .wrapper {
+        gap: 32px;
+    }
+
+    .slide {
+        .salary {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 56px;
+        }
+    }
+}

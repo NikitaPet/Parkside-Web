@@ -1,0 +1,16 @@
+@import '@global-styles-assets/all.scss';
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100dvh;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    main {
+        flex-grow: 1;
+        background-color: $bg-color;
+    }
+}

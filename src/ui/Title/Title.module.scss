@@ -1,0 +1,53 @@
+@import '@global-styles-assets/all.scss';
+
+.h1 {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+
+    color: $text-color;
+
+    &.white-style {
+        color: $white-color;
+    }
+}
+
+@media #{$mobile-375} {
+    .h1 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 32px;
+    }
+}
+
+@media #{$tablet-768} {
+    .h1 {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 42px;
+    }
+}
+
+@media #{$tablet-1024} {
+    .h1 {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 46px;
+    }
+}
+
+@media #{$tablet-1280} {
+    .h1 {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 54px;
+    }
+}
+
+@media #{$desktop-1440} {
+    .h1 {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 54px;
+    }
+}

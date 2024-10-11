@@ -1,4 +1,4 @@
-@import '@global/styles/assets/all.scss';
+@import '@global-styles-assets/all.scss';
 
 .wrapper {
     position: relative;
@@ -41,7 +41,7 @@
     height: auto;
     width: 100%;
     padding: 0 24px;
-    color: $blue-color;
+    color: $blue-color-1;
 
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@
     }
 }
 
-@media #{$desktop} {
+@media #{$desktop-1440} {
     .wrapper {
         h1 {
             font-size: 28px;

@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Разработка и развитие digital\u2011продуктов",
+        "text": "Предлагаем и реализуем IT\u2011решения, которые работают на цели бизнеса и увеличивают его конкурентоспособность",
+        "button": "Записаться на консультацию",
+        "nav": "Разработка",
+        "img": "/img/main/homepage/carousel/slide-1.jpg",
+        "link": "https://telegram.me/parksidecompanybot"
+    },
+    {
+        "title": "IT\u2011решения с минимальным количеством кода",
+        "text": "Сокращаем цикл разработки веб\u2011сайтов и приложений и снижаем стоимость проектов",
+        "button": "Выбрать тариф",
+        "nav": "Low-code",
+        "img": "/img/main/homepage/carousel/slide-2.jpg",
+        "link": "https://xn----7sbbpteq7blb1hqa.xn--p1ai/"
+    },
+    {
+        "title": "Создание и поддержка интернет-магазинов",
+        "text": "Разрабатываем и запускаем площадки для E\u2011commerce на базе Tilda",
+        "button": "Записаться на консультацию",
+        "nav": "Интернет-магазины",
+        "img": "/img/main/homepage/carousel/slide-3.jpg",
+        "link": "https://xn----7sbbpteq7blb1hqa.xn--p1ai/"
+    }
+]

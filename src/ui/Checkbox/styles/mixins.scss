@@ -1,0 +1,31 @@
+@import '@global-styles-assets/all.scss';
+
+@mixin checkbox-interactivity {
+    position: relative;
+    cursor: pointer;
+
+    @include mouse-hover {
+        .custom-checkbox {
+            background: $grey-color-1;
+        }
+    }
+
+    &:active {
+        .custom-checkbox {
+            background: $white-color-2;
+        }
+    }
+
+    &:focus-visible {
+        .custom-checkbox-wrapper {
+            border: 2px solid $text-color;
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        visibility: hidden;
+        pointer-events: none;
+        cursor: default;
+    }
+}

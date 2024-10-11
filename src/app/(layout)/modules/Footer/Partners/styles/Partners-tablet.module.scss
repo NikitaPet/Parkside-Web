@@ -1,0 +1,15 @@
+@media #{$tablet-768} {
+    .partners {
+        .title {
+            display: block;
+        }
+    }
+}
+
+@media #{$tablet-1280} {
+    .partners {
+        .portals {
+            display: block;
+        }
+    }
+}

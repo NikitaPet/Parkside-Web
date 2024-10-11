@@ -1,0 +1,16 @@
+$desktop-inner-padding: $desktop-extra-padding;
+
+@media #{$desktop-1440} {
+    .wrapper {
+        margin-top: 64px;
+        padding: 0 $module-base-padding !important;
+    }
+
+    .slide {
+        .salary {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 56px;
+        }
+    }
+}

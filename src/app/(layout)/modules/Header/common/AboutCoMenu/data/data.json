@@ -1,0 +1,6 @@
+[
+    { "name": "Наша команда", "url": "/company" },
+    { "name": "Вакансии", "url": "/vacancies" },
+    { "name": "Партнерская программа", "url": "/partners" },
+    { "name": "Контакты", "url": "/contacts" }
+]

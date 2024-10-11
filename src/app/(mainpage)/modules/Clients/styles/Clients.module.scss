@@ -1,0 +1,56 @@
+@import '@global-styles-assets/all.scss';
+
+.wrapper {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.text {
+  max-width: 235px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.list {
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 8px 32px;
+}
+
+.img-box {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .img {
+    height: 62px;
+    width: 102px;
+  }
+}
+
+@media #{$mobile-375} {
+  .text {
+    max-width: unset;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 12px 0;
+    justify-content: space-between;
+  }
+}
+
+@import './Clients-tablet.module.scss';
+@import './Clients-desktop.module.scss';

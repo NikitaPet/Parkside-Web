@@ -1,0 +1,55 @@
+$tablet-inner-padding: $tablet-extra-padding;
+
+@media #{$tablet-768} {
+    .wrapper {
+        margin-bottom: 32px;
+    }
+
+    .slide {
+        padding: 0 $tablet-inner-padding;
+
+        .title {
+            font-weight: 600;
+            font-size: 38px;
+            line-height: 50px;
+        }
+
+        .text {
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 26px;
+        }
+
+        .button {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
+}
+
+@media #{$tablet-1024} {
+    .slide {
+        .title {
+            font-weight: 600;
+            font-size: 46px;
+            line-height: 58px;
+        }
+
+        .text {
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 28px;
+        }
+    }
+}
+
+@media #{$tablet-1280} {
+    .wrapper {
+        padding: 0 24px !important;
+    }
+
+    .content {
+        border-radius: 20px;
+    }
+}

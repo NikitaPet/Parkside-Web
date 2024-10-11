@@ -1,0 +1,53 @@
+$tablet-inner-padding: $tablet-extra-padding;
+
+$navigation-height: 56px;
+
+@media #{$tablet-768} {
+    .wide-nav {
+        .navs {
+            height: $navigation-height;
+            padding: 0 $tablet-inner-padding;
+        }
+
+        .loader {
+            bottom: calc(($navigation-height - $loader-size)/2);
+            right: $tablet-inner-padding;
+        }
+    }
+}
+
+
+
+@media #{$tablet-1024} {
+    $navigation-height: 64px;
+
+    $loader-size: 16px;
+    $progress: var(--loader-progress);
+    $progress-circle-length: 64;
+
+    .wide-nav {
+        .navs {
+            height: $navigation-height;
+            padding: 0 $tablet-inner-padding;
+        }
+
+        .loader {
+            bottom: calc(($navigation-height - $loader-size)/2);
+            height: $loader-size;
+        }
+    }
+}
+
+@media #{$tablet-1280} {
+    $carousel-padding: 24px;
+
+    .wide-nav {
+        .navs {
+            padding: 0 calc($tablet-inner-padding - $carousel-padding);
+        }
+
+        .loader {
+            right: calc($tablet-inner-padding - $carousel-padding);
+        }
+    }
+}

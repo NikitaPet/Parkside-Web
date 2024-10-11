@@ -1,0 +1,12 @@
+@media #{$desktop-1440} {
+  .wrapper {
+    margin-bottom: 96px;
+  }
+
+  .portfolio {
+    padding: 54px;
+    display: flex;
+    justify-content: space-between;
+    gap: 120px;
+  }
+}

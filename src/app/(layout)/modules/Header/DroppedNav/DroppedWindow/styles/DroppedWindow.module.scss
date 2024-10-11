@@ -1,0 +1,286 @@
+@import '@global-styles-assets/all.scss';
+@import '@layout/styles/assets/all.scss';
+@import '@layout/modules/Header/styles/assets/all.scss';
+
+$mobile-inner-padding: $mobile-extra-padding;
+$tablet-inner-padding: $tablet-extra-padding;
+
+$dropped-window-transition-duration-ms: 600;
+$dropped-window-transition-duration: calc($dropped-window-transition-duration-ms * 1ms);
+
+$icon-width: 24px;
+$icon-button-width: 54px;
+$icon-padding: calc(($icon-button-width - $icon-width)/2);
+
+:export {
+    dropped-window-transition-duration-ms: $dropped-window-transition-duration-ms;
+}
+
+.wrapper {
+    z-index: 50000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    max-height: 100dvh;
+
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    overflow-y: scroll;
+    @include scrollbar(0);
+    transition: transform $dropped-window-transition-duration ease-out;
+
+    @media #{$fixed-nav-screen-min-width} {
+        display: none;
+    }
+
+    &.inactive {
+        transform: translateY(-1000px);
+        transition: transform $dropped-window-transition-duration ease-in;
+        @include disable-interaction;
+    }
+}
+
+.window-header {
+    $window-header-height: $mobile-header-height;
+
+    z-index: 10;
+    position: sticky;
+    top: 0;
+
+    height: $window-header-height;
+    min-height: $window-header-height;
+    padding: 0 calc($mobile-inner-padding - $icon-padding);
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    background-color: inherit;
+
+    .logo {
+        height: 100%;
+        width: 100%;
+        padding-right: $icon-button-width;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .logo-box {
+            width: auto;
+            padding: 8px;
+            border-radius: 8px;
+
+            .logo-icon {
+                height: 21px;
+            }
+        }
+    }
+
+    .close {
+        height: auto;
+        width: $icon-button-width;
+        aspect-ratio: 1;
+        border-radius: 8px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        @include layout-icon-interactivity-2;
+
+        .icon {
+            width: $icon-width;
+        }
+    }
+}
+
+.nav {
+    height: 100%;
+    width: 100%;
+
+    .list {
+        width: 100%;
+        padding: 0 24px;
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
+.item {
+    $item-min-height: 60px;
+
+    position: relative;
+    border-bottom: 2px solid $white-color-2;
+    display: flex;
+    flex-direction: column;
+    color: $text-color;
+
+    .item-row {
+        min-height: $item-min-height;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title {
+        width: max-content;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 28px;
+
+        .title-line {
+            width: 0;
+            transition: width 0.5s;
+        }
+    }
+
+    .title-arrow {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+
+        .arrow-button {
+            width: 54px;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .arrow {
+                width: 18px;
+                aspect-ratio: 1;
+                transition: transform 150ms ease;
+            }
+        }
+
+        &.active {
+            .title {
+                color: $blue-color-1;
+
+                .title-line {
+                    border-color: $blue-color-1;
+                    width: 100%;
+                }
+            }
+
+            .arrow {
+                transform: scaleY(-1);
+            }
+        }
+    }
+
+    .layout-interaction-link-button {
+        height: 100%;
+        width: fit-content;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-radius: 10px;
+        @include layout-button-interactivity-3
+    }
+
+    .layout-interaction-menu-button {
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        .title {
+            border-radius: 10px;
+        }
+
+        .arrow-button {
+            padding: 8px;
+            border-radius: 10px;
+            @include layout-icon-interactivity-2;
+        }
+
+        @include mouse-hover {
+            .title {
+                color: $blue-color-2;
+            }
+
+            .arrow-button {
+                background: $blue-color-5;
+            }
+        }
+
+        &:active {
+            .title {
+                color: $blue-color-3;
+            }
+
+            .arrow-button {
+                background: $blue-color-6;
+            }
+        }
+    }
+}
+
+.rolling-box {
+    width: 100%;
+    max-height: 0;
+    // transition: max-height 0.5s ease-out;
+    overflow: hidden;
+
+    .content-box {
+        width: 100%;
+    }
+
+    &.active {
+        max-height: 1600px;
+        // transition: max-height 0.5s ease-in;
+        overflow: visible;
+    }
+}
+
+@media #{$mobile-375} {
+    .wrapper {
+        gap: 16px;
+    }
+
+    .item {
+        .title {
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 28px;
+        }
+    }
+}
+
+@media #{$tablet-768} {
+    $tablet-inner-padding: 32px;
+
+    .wrapper {
+        gap: 0;
+    }
+
+    .window-header {
+        $window-header-height: $tablet-header-height;
+        height: $window-header-height;
+        min-height: $window-header-height;
+        padding: 0 calc($tablet-inner-padding - $icon-padding);
+    }
+
+    .nav {
+        .list {
+            padding: 0 $tablet-inner-padding;
+            padding-bottom: 100px;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import '@global-styles-assets/all.scss';
+
+$mobile-inner-padding: $mobile-extra-padding;
+$tablet-inner-padding: $tablet-extra-padding;
+
+.wrapper {
+    margin-top: 0;
+    padding: 0 $module-base-padding !important;
+    overflow: visible;
+}
+
+.imgs-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+
+    .img-box {
+        display: flex;
+    }
+
+    .img {
+        object-fit: fill !important;
+    }
+}
+
+@media #{$tablet-768} {
+    .wrapper {
+        padding: 0 $tablet-inner-padding !important;
+    }
+
+    // .content {
+    //     padding: 0 $tablet-inner-padding
+    // }
+
+    .imgs-box {
+        width: 100%;
+        aspect-ratio: 9/4;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+
+        // .img-box {
+        //     height: 100%;
+        //     width: 100%;
+        // }
+    }
+}
+
+// @media #{$tablet-1024} {}
+
+@media #{$desktop-1440} {
+    .wrapper {
+        padding: 0 $module-base-padding !important;
+    }
+}

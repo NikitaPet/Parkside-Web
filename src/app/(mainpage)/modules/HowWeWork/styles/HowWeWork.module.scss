@@ -1,0 +1,89 @@
+@import '@global-styles-assets/all.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info {
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .title {
+        display: inline;
+    }
+
+    .description {
+        display: inline;
+        white-space: pre-line;
+    }
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    .item {
+        height: 100%;
+        min-height: 480px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+        background-color: $white-color-2;
+        overflow: hidden;
+
+        .img {
+            // height: auto;
+            height: 168px;
+            width: 100%;
+        }
+
+        .title-box {
+            padding: 16px;
+            padding-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .title {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+            .description {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+@media #{$mobile-375} {
+    .items {
+        .item {
+            .title-box {
+                .title {
+                    font-weight: 500;
+                    font-size: 19px;
+                    line-height: 28px;
+                }
+
+                .description {
+                    font-weight: 400;
+                    font-size: 15px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}
+
+@import './HowWeWork-tablet.module.scss';
+@import './HowWeWork-desktop.module.scss';

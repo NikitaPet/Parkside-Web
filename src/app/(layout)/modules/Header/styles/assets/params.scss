@@ -1,0 +1,11 @@
+$mobile-header-height-px: 96;
+$mobile-header-height: calc($mobile-header-height-px * 1px);
+
+$tablet-header-height-px: 80;
+$tablet-header-height: calc($tablet-header-height-px * 1px);
+
+$header-transition-duration: 0.5s;
+
+:export {
+    header-height-px: $tablet-header-height-px;
+}

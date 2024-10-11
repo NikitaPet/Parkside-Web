@@ -1,0 +1,126 @@
+@import '@global-styles-assets/all.scss';
+
+$mobile-inner-padding: $mobile-extra-padding;
+
+$shade-color: linear-gradient(90deg, rgba(0, 0, 0, 0.48) 30%, rgba(0, 0, 0, 0) 100%);
+
+.wrapper {
+    padding: 0 $module-base-padding !important;
+    margin-top: 0 !important;
+    overflow: visible;
+}
+
+.content {
+    overflow: hidden;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    padding: 48px $mobile-inner-padding;
+    
+    display: flex;
+    background-position: right;
+    background-size: cover;
+
+    color: $white-color;
+
+
+    .slide-content {
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        max-width: 480px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    .shade {
+        z-index: 1;
+        height: 100%;
+        width: 60%;
+        min-width: 500px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $shade-color;
+    }
+
+    .title {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 42px;
+    }
+
+    .point {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+
+        &:before {
+            content: '-';
+        }
+    }
+
+    .text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        white-space: pre-line;
+    }
+
+    .text-conticle {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        white-space: pre-line;
+    }
+
+    .button {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+
+
+
+@media #{$mobile-375} {
+    .slide {
+        min-height: 560px;
+        padding: 64px $mobile-inner-padding;
+
+        .slide-content {
+            gap: 24px;
+        }
+
+        .title {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 42px;
+        }
+
+        .text {
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 22px;
+        }
+
+        .button {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}
+
+
+
+@import './Hero-tablet.module.scss';
+@import './Hero-desktop.module.scss';

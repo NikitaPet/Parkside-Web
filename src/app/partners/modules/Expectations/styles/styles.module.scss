@@ -1,0 +1,36 @@
+@import '@global-styles-assets/all.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: $black-color;
+
+    .description {
+        max-width: 860px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+    }
+}
+
+
+
+// @media #{$mobile-375} {}
+
+
+
+@import './styles-tablet.module.scss';
+@import './styles-desktop.module.scss';

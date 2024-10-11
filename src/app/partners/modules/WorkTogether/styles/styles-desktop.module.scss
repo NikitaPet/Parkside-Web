@@ -1,0 +1,24 @@
+@media #{$desktop-1440} {
+    .content {
+        .cards-list {
+            gap: 52px;
+
+            .card {
+                display: grid;
+                grid-template-columns: auto 1fr auto;
+                grid-template-rows: unset;
+                padding: 32px 24px;
+                gap: 16px;
+
+                &>* {
+                    &:nth-child(n) {
+                        grid-row-start: unset;
+                        grid-row-end: unset;
+                        grid-column-end: unset;
+                        grid-column-start: unset;
+                    }
+                }
+            }
+        }
+    }
+}

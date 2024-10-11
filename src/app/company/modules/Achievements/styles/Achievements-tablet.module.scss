@@ -1,0 +1,40 @@
+@media #{$tablet-768} {
+    .achievements {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        .achievement {
+            padding: 24px;
+
+            .title {
+                font-size: 19px;
+                font-weight: 400;
+                line-height: 28px;
+            }
+
+            .value {
+                padding: 0;
+                font-weight: 700;
+                font-size: 70px;
+                line-height: 84px;
+            }
+        }
+    }
+
+
+}
+
+@media #{$tablet-1024} {
+    .achievements {
+        .achievement {
+            padding: 24px 32px;
+
+            .value {
+                font-weight: 700;
+                font-size: 92px;
+                line-height: 110px;
+            }
+        }
+    }
+}
